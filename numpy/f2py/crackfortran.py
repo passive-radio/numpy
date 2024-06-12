@@ -3652,14 +3652,14 @@ def character_backward_compatibility_hook(item, parents, result,
                        varname, value)
         return value
 
-    if parent_key in ['dimension', 'check']:
-        assert parents[-3][0] == 'vars'
-        vars_dict = parents[-3][1]
-    elif key == '=':
-        assert parents[-2][0] == 'vars'
-        vars_dict = parents[-2][1]
-    else:
-        vars_dict = None
+    # if parent_key in ['dimension', 'check']:
+    #     assert parents[-3][0] == 'vars'
+    #     vars_dict = parents[-3][1]
+    # elif key == '=':
+    #     assert parents[-2][0] == 'vars'
+    #     vars_dict = parents[-2][1]
+    # else:
+    #     vars_dict = None
 
     new_value = None
     if vars_dict is not None:
